@@ -1,0 +1,22 @@
+{
+  "dt": 11425.0,
+  "switch": 1.0,
+  "pktcount": 45304.0,
+  "bytecount": 48294060.0,
+  "dur": 100.0,
+  "dur_nsec": 716000000.0,
+  "tot_dur": 101000000000.0,
+  "flows": 3.0,
+  "packetins": 1943.0,
+  "pktperflow": 13535.0,
+  "byteperflow": 14428310.0,
+  "pktrate": 451.0,
+  "Pairflow": 0.0,
+  "Protocol": 0.3218937,
+  "port_no": 3.0,
+  "tx_bytes": 143928600.0,
+  "rx_bytes": 3917.0,
+  "tx_kbps": 0.0,
+  "rx_kbps": 0.0,
+  "tot_kbps": 0.0
+}
