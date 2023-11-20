@@ -38,15 +38,17 @@ def predict():
     if model:
         try:
             data = request.json  # Assuming data is an array of JSON objects
-            df_rows = pd.DataFrame.from_dict(data)
-
+            df = pd.DataFrame.from_dict(data)
+            features = df[model_columns]
+            logger.info("Features: " + str(features))
             # Assuming model is a trained machine learning model
-            predictions = list(model.predict(df_rows))
+            predictions = list(model.predict(features))
             labels = ['Attack' if pred else 'Normal' for pred in predictions]
 
             result = []
             for i in range(len(predictions)):
                 result.append({
+                    'ip': df['ip'][i],
                     'prediction': str(predictions[i]),
                     'label': labels[i]
                 })
