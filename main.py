@@ -37,14 +37,21 @@ basic_auth = BasicAuth(app)
 def predict():
     if model:
         try:
-            json_ = request.json
-            df_row = pd.DataFrame.from_dict([json_])
-            prediction = list(model.predict(df_row))
-            label = 'Attack' if prediction[0] else 'Normal'
-            return jsonify({
-                'prediction': str(prediction),
-                'Label': label
-            })
+            data = request.json  # Assuming data is an array of JSON objects
+            df_rows = pd.DataFrame.from_dict(data)
+
+            # Assuming model is a trained machine learning model
+            predictions = list(model.predict(df_rows))
+            labels = ['Attack' if pred else 'Normal' for pred in predictions]
+
+            result = []
+            for i in range(len(predictions)):
+                result.append({
+                    'prediction': str(predictions[i]),
+                    'label': labels[i]
+                })
+
+            return jsonify(result)
         except ValueError as ve:
             return jsonify({'trace': traceback.format_exc()})
     else:
