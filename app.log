@@ -1,0 +1,22 @@
+app - INFO - API is running at http://localhost:8064/predict
+werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8064
+werkzeug - INFO - [33mPress CTRL+C to quit[0m
+werkzeug - INFO - 127.0.0.1 - - [21/Nov/2023 21:01:11] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+werkzeug - INFO - 127.0.0.1 - - [21/Nov/2023 21:01:25] "POST /predict HTTP/1.1" 200 -
+app - INFO - Features:         dt  switch  pktcount  bytecount   dur     dur_nsec  ...  port_no  tx_bytes  rx_bytes  tx_kbps  rx_kbps  tot_kbps
+0  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+
+[1 rows x 20 columns]
+werkzeug - INFO - 127.0.0.1 - - [21/Nov/2023 21:01:33] "POST /predict HTTP/1.1" 200 -
+app - INFO - Features:         dt  switch  pktcount  bytecount   dur     dur_nsec  ...  port_no  tx_bytes  rx_bytes  tx_kbps  rx_kbps  tot_kbps
+0  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+1  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+2  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+3  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+4  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+5  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+6  11335.0     1.0    4777.0  5092282.0  10.0  711000000.0  ...      2.0    3753.0    1332.0      0.0      0.0       0.0
+
+[7 rows x 20 columns]
+werkzeug - INFO - 127.0.0.1 - - [21/Nov/2023 21:02:45] "POST /predict HTTP/1.1" 200 -
